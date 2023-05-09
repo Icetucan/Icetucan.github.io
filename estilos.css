@@ -1,0 +1,162 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: "Brush Script MT";
+    background-image: url(wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav{
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    background-color: #000000;
+    
+}
+@media (max-width: 768px) {
+    nav {
+      position: static;
+      width: auto;
+    }}
+nav .logo{
+    color: rgb(255, 255, 255);
+    float: left;
+    display: block;
+    font-family: "Chalkboard";
+    padding: 14px 16px;
+
+}
+nav a {
+    float: right;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav a:hover{
+    transition: 0.5s;
+    background-color: #ffffff;
+    color:  #000000;
+}
+
+.content{
+    height: 520px;
+    width: 935px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.content img {
+    padding-top: 1px;
+    max-width: 100%;
+    height: auto;
+  }
+  .navigation{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+  }
+  .bar {
+    width: 40px;
+    height: 17px;
+    border: 2px solid#fff;
+    margin: 6px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .6s;
+  }
+  .bar:hover{
+    background: #fff;
+  }
+  input{
+    display: none;
+  }
+  .slides{
+    display: flex;
+    width: 500%;
+    height: 100%;
+  }
+  .slide{
+    width: 20%;
+    transition: .6s;
+  }
+  #slide1:checked ~ .s1 {
+    margin-left: 0;
+  }
+  #slide2:checked ~ .s1 {
+    margin-left: -20%;
+  }
+  #slide3:checked ~ .s1 {
+    margin-left: -40%;
+  }
+  #slide4:checked ~ .s1 {
+    margin-left: -60%;
+  }
+  #slide5:checked ~ .s1 {
+    margin-left: -80%;
+  }
+  #sobre {
+    background-image: url("wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+}
+#sobre:target .content {
+    display: none;
+  }
+  .credit {
+    background: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.3em;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 0.5em;
+}
+#sobre:target .credit {
+    display: block;
+  }
+  .github {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+  .pandinha {
+    position: absolute;
+    top: 450px;
+    left: 840px;
+    cursor: pointer;
+  }
+  .texto-oculto {
+    position: absolute;
+    bottom: 250px;
+    right: 135px;
+    width: 500px;
+    text-align: center;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    cursor: default;
+}
+img:hover + .texto-oculto {
+    opacity: 1;
+  }
